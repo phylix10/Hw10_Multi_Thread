@@ -1,0 +1,35 @@
+what is Livelock ?
+In the case of a livelock, the states of the processes involved in a live lock scenario constantly change.
+On the other hand, the processes still depend on each other and can never finish their tasks.
+
+A real-world example of livelock occurs when two people make a telephone call to each other and both find the line is busy.
+Both gentlemen decide to hang up and attempt to call after the same time interval.
+Thus, in the next retry too, they ended up in the same situation. This is an example of a live lock as this can go on forever.
+
+-------------------------------------------------------------------------------------------------
+Difference between Deadlock, Starvation, and Livelock:
+
+1) Livelock:
+A livelock is similar to a deadlock, except that the states of the processes involved in the livelock constantly change
+With regard to one another, none progressing. Livelock is a special case of resource starvation;
+The general definition states that a specific process is not progressing.
+
+LivelockExample.java
+
+2) Deadlock:
+A deadlock is a state in which each member of a group of actions,
+Is waiting for some other member to release a lock.
+A livelock on the other hand is almost similar to a deadlock,
+Except that the states of the processes involved in a livelock constantly keep on changing with regard to one another,
+None progressing. So Livelock is a special case of resource starvation, as stated from the general definition,
+The process is not progressing.
+
+DeadlockExample.java
+
+3) Starvation:
+Starvation is a problem that is closely related to both,
+Livelock and Deadlock. In a dynamic system, requests for resources keep on happening.
+Thereby, some policy is needed to make a decision about who gets the resource and when this process,
+Being reasonable, may lead to some processes never getting serviced even though they are not deadlocked.
+
+StarvationExample.java
