@@ -1,0 +1,25 @@
+The reasons that show that the string class is thread safe:
+1) Since String is immutable in Java, it's inherently thread-safe.
+2) Read-only or final variables in Java are also thread-safe in Java.
+3) Locking is one way of achieving thread-safety in Java.
+
+---------------------------------------------------------------------
+But let's look a little deeper:
+Immutable object definition: An immutable object is an object that would not be able to change its state after creation.
+So immutable object can only be in one state and that state can not be changed after creation of the object.
+
+Tip: Whenever content of the String is changed, a new String is created and the reference is changed.
+Same thing will happen in case of multiple threads too.
+
+----------------------------------------------------------------------
+Let’s try to see this with an example(Test1.java)
+
+With this program you can see that String is immutable so original String won't be changed
+But String reference can still be changed with multiple threads.
+So Java Strings are thread safe here means when the shared String is changed it creates a
+New copy for another thread that way original String remains unchanged.
+
+-----------------------------------------------------------------------
+Tow to see what may happen with a mutable object let us use StringBuffer in the place of String(Test2.java)
+
+Here it can be seen that shared StringBuffer object is modified.
